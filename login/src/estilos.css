@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fb;
+}
+
+.contenedor-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Tarjetas */
+.tarjeta-login,
+.tarjeta,
+.tarjeta-admin {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 350px;
+}
+
+.tarjeta-admin {
+  width: 600px;
+}
+
+/* Inputs */
+.campo-texto {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #cdd6f4;
+}
+
+/* Botón */
+.boton-principal {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #a0c4ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-principal:hover {
+  background-color: #89b4fa;
+}
+
+/* Tabla */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  border: 1px solid #dbeafe;
+  padding: 8px;
+  text-align: center;
+}
+
+.tabla-usuarios th {
+  background-color: #bde0fe;
+}
