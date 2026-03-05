@@ -1,21 +1,19 @@
 import { Navigate } from "react-router-dom";
 import { usarAuth } from "../context/ContextoAuth";
 
-// Este componente protege rutas privadas
 export default function RutaProtegida({ children, rolRequerido }) {
 
   const { usuarioActual } = usarAuth();
 
-  // Si no hay sesión → lo manda al login
+  // Si no hay sesión
   if (!usuarioActual) {
-    return <Navigate to="/" />;
+    return <Navigate to="/login" replace />;
   }
 
-  // Si la ruta requiere un rol específico
+  // Si requiere rol
   if (rolRequerido && usuarioActual.rol !== rolRequerido) {
-    return <Navigate to="/perfil" />;
+    return <Navigate to="/perfil" replace />;
   }
 
-  // Si cumple las condiciones → muestra la vista
   return children;
 }
